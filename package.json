@@ -2,7 +2,7 @@
   "name": "travelify",
   "main": "Gruntfile.js",
   "author": "Colorlib",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "repository": "https://github.com/MachoThemes/travelify",
   "license": "GPL v3",
   "devDependencies": {

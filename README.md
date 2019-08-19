@@ -53,6 +53,10 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 
 ## Change Log
 
+**= 3.0.5 =**
+
+* Improved accesibility with keyboard navigation
+
 **= 3.0.4 =**
 
 * Small bug fixes and improvements
