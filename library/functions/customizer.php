@@ -594,7 +594,7 @@ function travelify_sanitize_radio_header( $input ) {
  * @package Travelify
  */
 function travelify_sanitize_radio_layout( $input ) {
-    $valid = array( 'no-sidebar' => 'No Sidebar','no-sidebar-full-width' => 'No Sidebar, Full Width', 'no-sidebar-one-column' => 'No Sidebar, One Column', 'left-sidebar' => 'Left Sidebar', 'right-sidebar' => 'Right Sidebar' ); 
+    $valid = array( 'no-sidebar' => 'No Sidebar','no-sidebar-full-width' => 'No Sidebar, Full Width', 'no-sidebar-one-column' => 'No Sidebar, One Column', 'left-sidebar' => 'Left Sidebar', 'right-sidebar' => 'Right Sidebar' );
     if ( array_key_exists( $input, $valid ) ) {
         return $input;
     } else {
@@ -639,23 +639,93 @@ function travelify_customizer_css() {
     <style type="text/css">
         a { color: <?php echo get_theme_mod('travelify_link_color', '#57AD68'); ?>; }
         #site-title a { color: <?php echo get_theme_mod('travelify_logo_color'); ?>; }
-        #site-title a:hover { color: <?php echo get_theme_mod('travelify_logo_hover_color'); ?>; }
+        #site-title a:hover, #site-title a:focus  { color: <?php echo get_theme_mod('travelify_logo_hover_color'); ?>; }
         .wrapper { background: <?php echo get_theme_mod('travelify_wrapper_color', '#F8F8F8'); ?>; }
         .social-icons ul li a { color: <?php echo get_theme_mod('travelify_social_color', '#d0d0d0'); ?>; }
-        #main-nav a, #main-nav a:hover,  #main-nav a:focus, #main-nav ul li.current-menu-item a,#main-nav ul li.current_page_ancestor a,#main-nav ul li.current-menu-ancestor a,#main-nav ul li.current_page_item a,#main-nav ul li:hover > a { color: <?php echo get_theme_mod('travelify_menu_item_color', '#fff'); ?>; }
+		#main-nav a,
+		#main-nav a:hover,
+		#main-nav a:focus,
+		#main-nav ul li.current-menu-item a,
+		#main-nav ul li.current_page_ancestor a,
+		#main-nav ul li.current-menu-ancestor a,
+		#main-nav ul li.current_page_item a,
+		#main-nav ul li:hover > a,
+		#main-nav ul li:focus-within > a { color: <?php echo get_theme_mod('travelify_menu_item_color', '#fff'); ?>; }
         .widget, article { background: <?php echo get_theme_mod('travelify_content_bg_color', '#fff'); ?>; }
         .entry-title, .entry-title a, .entry-title a:focus, h1, h2, h3, h4, h5, h6, .widget-title  { color: <?php echo get_theme_mod('travelify_header_color', '#1b1e1f'); ?>; }
-        a:focus, a:active, a:hover, .tags a:hover, .custom-gallery-title a, .widget-title a, #content ul a:hover,#content ol a:hover, .widget ul li a:hover, .entry-title a:hover, .entry-meta a:hover, #site-generator .copyright a:hover { color: <?php echo get_theme_mod('travelify_link_hover_color', '#439f55'); ?>; }
+		a:focus,
+		a:active,
+		a:hover,
+		.tags a:hover,
+		.tags a:focus,
+		.custom-gallery-title a,
+		.widget-title a,
+		#content ul a:hover,
+		#content ul a:focus,
+		#content ol a:hover,
+		#content ol a:focus,
+		.widget ul li a:hover,
+		.widget ul li a:focus,
+		.entry-title a:hover,
+		.entry-title a:focus,
+		.entry-meta a:hover,
+		.entry-meta a:focus,
+		#site-generator .copyright a:hover,
+		#site-generator .copyright a:focus { color: <?php echo get_theme_mod('travelify_link_hover_color', '#439f55'); ?>; }
         #main-nav { background: <?php echo get_theme_mod('travelify_menu_color', '#57ad68'); ?>; border-color: <?php echo get_theme_mod('travelify_menu_color', '#57ad68'); ?>; }
         #main-nav ul li ul, body { border-color: <?php echo get_theme_mod('travelify_menu_color', '#439f55'); ?>; }
-        #main-nav a:hover,#main-nav ul li.current-menu-item a,#main-nav ul li.current_page_ancestor a,#main-nav ul li.current-menu-ancestor a,#main-nav ul li.current_page_item a,#main-nav ul li:hover > a, #main-nav li:hover > a,#main-nav ul ul :hover > a,#main-nav a:focus { background: <?php echo get_theme_mod('travelify_menu_hover_color', '#439f55'); ?>; }
-        #main-nav ul li ul li a:hover,#main-nav ul li ul li:hover > a,#main-nav ul li.current-menu-item ul li a:hover { color: <?php echo get_theme_mod('travelify_menu_hover_color', '#439f55'); ?>; }
+		#main-nav a:hover,
+		#main-nav a:focus,
+		#main-nav ul li.current-menu-item a,
+		#main-nav ul li.current_page_ancestor a,
+		#main-nav ul li.current-menu-ancestor a,
+		#main-nav ul li.current_page_item a,
+		#main-nav ul li:hover > a,
+		#main-nav ul li:focus-within > a,
+		#main-nav li:hover > a,
+		#main-nav li:focus-within > a,
+		#main-nav ul ul :hover > a,
+		#main-nav ul ul :focus-within > a,
+		#main-nav a:focus { background: <?php echo get_theme_mod('travelify_menu_hover_color', '#439f55'); ?>; }
+		#main-nav ul li ul li a:hover,
+		#main-nav ul li ul li a:focus,
+		#main-nav ul li ul li:hover > a,
+		#main-nav ul li ul li:focus-within > a,
+		#main-nav ul li.current-menu-item ul li a:hover
+		#main-nav ul li.current-menu-item ul li a:focus { color: <?php echo get_theme_mod('travelify_menu_hover_color', '#439f55'); ?>; }
         .entry-content { color: <?php echo get_theme_mod('travelify_entry_color', '#1D1D1D'); ?>; }
-        input[type="reset"], input[type="button"], input[type="submit"], .entry-meta-bar .readmore, #controllers a:hover, #controllers a.active, .pagination span, .pagination a:hover span, .wp-pagenavi .current, .wp-pagenavi a:hover { background: <?php echo get_theme_mod('travelify_element_color', '#57ad68'); ?>; border-color: <?php echo get_theme_mod('travelify_element_color', '#57ad68'); ?> !important; }
-        ::selection { background: <?php echo get_theme_mod('travelify_element_color', '#57ad68'); ?>; }
+		input[type="reset"],
+		input[type="button"],
+		input[type="submit"],
+		.entry-meta-bar .readmore,
+		#controllers a:hover,
+		#controllers a.active,
+		.pagination span,
+		.pagination a:hover span,
+		.pagination a:focus span,
+		.wp-pagenavi .current,
+		.wp-pagenavi a:hover,
+		.wp-pagenavi a:focus { background: <?php echo get_theme_mod('travelify_element_color', '#57ad68'); ?>; border-color: <?php echo get_theme_mod('travelify_element_color', '#57ad68'); ?> !important; }
+		::selection,
+		.back-to-top:focus-within a { background: <?php echo get_theme_mod('travelify_element_color', '#57ad68'); ?>; }
         blockquote { border-color: <?php echo get_theme_mod('travelify_element_color', '#439f55'); ?>; }
-        #controllers a:hover, #controllers a.active { color: <?php echo get_theme_mod('travelify_element_color', ' #439f55'); ?>; }
-        input[type="reset"]:hover,input[type="button"]:hover,input[type="submit"]:hover,input[type="reset"]:active,input[type="button"]:active,input[type="submit"]:active, .entry-meta-bar .readmore:hover, .entry-meta-bar .readmore:active, ul.default-wp-page li a:hover, ul.default-wp-page li a:active { background: <?php echo get_theme_mod('travelify_element_hover_color', '#439f55'); ?>; border-color: <?php echo get_theme_mod('travelify_element_hover_color', '#439f55'); ?>; }
+		#controllers a:hover,
+		#controllers a.active { color: <?php echo get_theme_mod('travelify_element_color', ' #439f55'); ?>; }
+		input[type="reset"]:hover,
+		input[type="reset"]:focus,
+		input[type="button"]:hover,
+		input[type="button"]:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		input[type="reset"]:active,
+		input[type="button"]:active,
+		input[type="submit"]:active,
+		.entry-meta-bar .readmore:hover,
+		.entry-meta-bar .readmore:focus,
+		.entry-meta-bar .readmore:active,
+		ul.default-wp-page li a:hover,
+		ul.default-wp-page li a:focus,
+		ul.default-wp-page li a:active { background: <?php echo get_theme_mod('travelify_element_hover_color', '#439f55'); ?>; border-color: <?php echo get_theme_mod('travelify_element_hover_color', '#439f55'); ?>; }
     </style>
     <?php
 }
