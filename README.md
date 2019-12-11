@@ -53,6 +53,11 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 
 ## Change Log
 
+**= 3.0.6 =**
+
+* Added wp_body_open
+* Added unminified Scripts and styles
+
 **= 3.0.5 =**
 
 * Improved accesibility with keyboard navigation
