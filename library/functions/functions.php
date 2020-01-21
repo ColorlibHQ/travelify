@@ -51,7 +51,7 @@ function travelify_scripts_styles_method() {
 		wp_enqueue_script( 'travelify_slider', get_template_directory_uri() . '/library/js/slider-settings.min.js', array( 'jquery_cycle' ), false, true );
 	}
 
-	wp_enqueue_script( 'theme_functions', get_template_directory_uri() . '/library/js/functions.min.js', array( 'jquery' ) );
+	wp_enqueue_script( 'travelify_functions', get_template_directory_uri() . '/library/js/functions.min.js', array( 'jquery' ) );
 
 	wp_enqueue_style( 'google_font_ubuntu' );
 
@@ -60,7 +60,7 @@ function travelify_scripts_styles_method() {
     */
 	$travelify_user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
 	if(preg_match('/(?i)msie [1-8]/',$travelify_user_agent)) {
-		wp_enqueue_script( 'html5', get_template_directory_uri() . '/library/js/html5.js', true );
+		wp_enqueue_script( 'html5', get_template_directory_uri() . '/library/js/html5.min.js', true );
 	}
 
 }
@@ -291,14 +291,14 @@ if ( !function_exists('travelify_wp_page_menu_filter') ) {
 remove_action('woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 remove_action('woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 
-add_action('woocommerce_before_main_content', 'responsive_woocommerce_wrapper', 10);
-add_action('woocommerce_after_main_content', 'responsive_woocommerce_wrapper_end', 10);
+add_action('woocommerce_before_main_content', 'travelify_responsive_woocommerce_wrapper', 10);
+add_action('woocommerce_after_main_content', 'travelify_responsive_woocommerce_wrapper_end', 10);
 
-function responsive_woocommerce_wrapper() {
+function travelify_responsive_woocommerce_wrapper() {
   echo '<div id="content-woocommerce" class="main">';
 }
 
-function responsive_woocommerce_wrapper_end() {
+function travelify_responsive_woocommerce_wrapper_end() {
   echo '</div><!-- end of #content-woocommerce -->';
 }
 
@@ -311,9 +311,9 @@ function travelify_widgets_init() {
 
 	// Registering main left sidebar
 	register_sidebar( array(
-		'name'          => __( 'Left Sidebar', 'travelify' ),
+		'name'          => esc_html__( 'Left Sidebar', 'travelify' ),
 		'id'            => 'travelify_left_sidebar',
-		'description'   => __( 'Shows widgets at Left side.', 'travelify' ),
+		'description'   => esc_html__( 'Shows widgets at Left side.', 'travelify' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -322,9 +322,9 @@ function travelify_widgets_init() {
 
 	// Registering main right sidebar
 	register_sidebar( array(
-		'name'          => __( 'Right Sidebar', 'travelify' ),
+		'name'          => esc_html__( 'Right Sidebar', 'travelify' ),
 		'id'            => 'travelify_right_sidebar',
-		'description'   => __( 'Shows widgets at Right side.', 'travelify' ),
+		'description'   => esc_html__( 'Shows widgets at Right side.', 'travelify' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -333,9 +333,9 @@ function travelify_widgets_init() {
 
 	// Registering footer widgets
 	register_sidebar( array(
-		'name'          => __( 'Footer', 'travelify' ),
+		'name'          => esc_html__( 'Footer', 'travelify' ),
 		'id'            => 'travelify_footer_widget',
-		'description'   => __( 'Shows widgets at footer.', 'travelify' ),
+		'description'   => esc_html__( 'Shows widgets at footer.', 'travelify' ),
 		'before_widget' => '<div class="col-3"><aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside></div>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -393,7 +393,7 @@ function travelify_admin_header_style() {
 		border: none;
 	}
 	#headimg img {
-		max-width: <?php echo get_theme_support( 'custom-header', 'max-width' ); ?>px;
+		max-width: <?php echo esc_attr( get_theme_support( 'custom-header', 'max-width' ) ); ?>px;
 	}
 	</style>
 <?php
@@ -409,7 +409,7 @@ function travelify_admin_header_image() {
 	<div id="headimg">
 		<?php $header_image = get_header_image();
 		if ( ! empty( $header_image ) ) : ?>
-			<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+			<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="" />
 		<?php endif; ?>
 	</div>
 

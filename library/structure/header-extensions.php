@@ -112,7 +112,7 @@ function travelify_headerdetails() {
 	</div><!-- .container -->
 	<?php $header_image = get_header_image();
 			if( !empty( $header_image ) ) :?>
-				<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+				<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo esc_attr(get_custom_header()->width); ?>" height="<?php echo esc_attr(get_custom_header()->height); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 			<?php endif; ?>
 	<?php
 		if ( has_nav_menu( 'primary' ) ) {
@@ -248,7 +248,7 @@ function travelify_featured_post_slider() {
 				<div class="'.$classes.'">';
 						if( has_post_thumbnail() ) {
 
-							$travelify_featured_post_slider .= '<figure><a href="' . get_permalink() . '" title="'.the_title('','',false).'">';
+							$travelify_featured_post_slider .= '<figure><a href="' . esc_url( get_permalink() ) . '" title="'.the_title('','',false).'">';
 
 							$travelify_featured_post_slider .= get_the_post_thumbnail( $post->ID, 'slider', array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $title_attribute ), 'class'	=> 'pngfix' ) ).'</a></figure>';
 						}
@@ -256,7 +256,7 @@ function travelify_featured_post_slider() {
 						$travelify_featured_post_slider .= '
 							<article class="featured-text">';
 							if( $title_attribute !='' ) {
-									$travelify_featured_post_slider .= '<div class="featured-title"><a href="' . get_permalink() . '" title="'.the_title('','',false).'">'. get_the_title() . '</a></div><!-- .featured-title -->';
+									$travelify_featured_post_slider .= '<div class="featured-title"><a href="' . esc_url( get_permalink() ) . '" title="'.the_title('','',false).'">'. get_the_title() . '</a></div><!-- .featured-title -->';
 							}
 							if( $excerpt !='' ) {
 								$travelify_featured_post_slider .= '<div class="featured-content">'.$excerpt.'</div><!-- .featured-content -->';
@@ -266,7 +266,7 @@ function travelify_featured_post_slider() {
 						}
 				$travelify_featured_post_slider .= '
 				</div><!-- .slides -->';
-			endwhile; wp_reset_query();
+			endwhile; wp_reset_postdata();
 		$travelify_featured_post_slider .= '</div>
 		<nav id="controllers" class="clearfix">
 		</nav><!-- #controllers --></section><!-- .featured-slider -->';

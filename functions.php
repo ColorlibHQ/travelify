@@ -79,10 +79,10 @@ if ( ! function_exists( 'travelify_setup' ) ):
 		register_nav_menu( 'primary', __( 'Primary Menu', 'travelify' ) );
 
 		// Add Travelify custom image sizes
-		add_image_size( 'featured', 670, 300, true );
-		add_image_size( 'featured-medium', 230, 230, true );
-		add_image_size( 'slider', 1018, 460, true );        // used on Featured Slider on Homepage Header
-		add_image_size( 'gallery', 474, 342, true );                // used to show gallery all images
+		add_image_size( 'travelify-featured', 670, 300, true );
+		add_image_size( 'travelify-featured-medium', 230, 230, true );
+		add_image_size( 'travelify-slider', 1018, 460, true );        // used on Featured Slider on Homepage Header
+		add_image_size( 'travelify-gallery', 474, 342, true );                // used to show gallery all images
 
 		// This feature enables WooCommerce support for a theme.
 		add_theme_support( 'woocommerce' );

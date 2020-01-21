@@ -14,15 +14,15 @@ function travelify_options_register_theme_customizer($wp_customize)
     $wp_customize->add_panel('travelify_main_options', array(
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Travelify Main Options', 'travelify'),
-        'description' => __('Panel to update travelify theme options', 'travelify'), // Include html tags such as <p>.
+        'title' => esc_html__('Travelify Main Options', 'travelify'),
+        'description' => esc_html__('Panel to update travelify theme options', 'travelify'), // Include html tags such as <p>.
         'priority' => 10 // Mixed with top-level-section hierarchy.
     ));
 
     /* Travelify Header Area */
     $wp_customize->add_section('travelify_menu_options', array(
-        'title' => __('Travelify Header Area', 'travelify'),
-        'description' => sprintf(__('Use the following settings change color for menu and website title', 'travelify')),
+        'title' => esc_html__('Travelify Header Area', 'travelify'),
+        'description' => esc_html__('Use the following settings change color for menu and website title', 'travelify'),
         'priority' => 31,
         'panel' => 'travelify_main_options'
     ));
@@ -31,7 +31,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_hexcolor'
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'travelify_logo_color', array(
-            'label' => __('Website Title Color', 'travelify'),
+            'label' => esc_html__('Website Title Color', 'travelify'),
             'section' => 'travelify_menu_options',
             'settings' => 'travelify_logo_color',
             'priority' => 1
@@ -42,7 +42,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_hexcolor'
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'travelify_logo_hover_color', array(
-            'label' => __('Website Title Hover Color', 'travelify'),
+            'label' => esc_html__('Website Title Hover Color', 'travelify'),
             'section' => 'travelify_menu_options',
             'settings' => 'travelify_logo_hover_color',
             'priority' => 2
@@ -53,7 +53,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_hexcolor'
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'travelify_menu_color', array(
-            'label' => __('Menu Bar Color', 'travelify'),
+            'label' => esc_html__('Menu Bar Color', 'travelify'),
             'section' => 'travelify_menu_options',
             'settings' => 'travelify_menu_color'
         )));
@@ -63,7 +63,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_hexcolor'
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'travelify_menu_hover_color', array(
-            'label' => __('Menu Bar Hover Color', 'travelify'),
+            'label' => esc_html__('Menu Bar Hover Color', 'travelify'),
             'section' => 'travelify_menu_options',
             'settings' => 'travelify_menu_hover_color'
         )));
@@ -73,7 +73,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_hexcolor'
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'travelify_menu_item_color', array(
-            'label' => __('Menu Item Text Color', 'travelify'),
+            'label' => esc_html__('Menu Item Text Color', 'travelify'),
             'section' => 'travelify_menu_options',
             'settings' => 'travelify_menu_item_color',
             'priority' => 3
@@ -84,7 +84,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_hexcolor'
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'travelify_social_color', array(
-            'label' => __('Social Icon Color', 'travelify'),
+            'label' => esc_html__('Social Icon Color', 'travelify'),
             'section' => 'travelify_menu_options',
             'settings' => 'travelify_social_color',
             'priority' => 13
@@ -92,8 +92,8 @@ function travelify_options_register_theme_customizer($wp_customize)
 
     /* Travelify Element Color */
     $wp_customize->add_section('travelify_element_options', array(
-        'title' => __('Travelify Element Color', 'travelify'),
-        'description' => sprintf(__('Use the following settings change color for website elements', 'travelify')),
+        'title' => esc_html__('Travelify Element Color', 'travelify'),
+        'description' => esc_html__('Use the following settings change color for website elements', 'travelify'),
         'priority' => 32,
         'panel' => 'travelify_main_options'
     ));
@@ -102,7 +102,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_hexcolor'
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'travelify_element_color', array(
-            'label' => __('Element Color', 'travelify'),
+            'label' => esc_html__('Element Color', 'travelify'),
             'section' => 'travelify_element_options',
             'settings' => 'travelify_element_color',
             'priority' => 4
@@ -113,7 +113,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_hexcolor'
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'travelify_element_hover_color', array(
-            'label' => __('Element Hover Color', 'travelify'),
+            'label' => esc_html__('Element Hover Color', 'travelify'),
             'section' => 'travelify_element_options',
             'settings' => 'travelify_element_hover_color',
             'priority' => 5
@@ -124,7 +124,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_hexcolor'
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'travelify_wrapper_color', array(
-            'label' => __('Wrapper Color', 'travelify'),
+            'label' => esc_html__('Wrapper Color', 'travelify'),
             'section' => 'travelify_element_options',
             'settings' => 'travelify_wrapper_color',
             'priority' => 6
@@ -135,7 +135,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_hexcolor'
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'travelify_content_bg_color', array(
-            'label' => __('Content Background Color', 'travelify'),
+            'label' => esc_html__('Content Background Color', 'travelify'),
             'section' => 'travelify_element_options',
             'settings' => 'travelify_content_bg_color',
             'priority' => 7
@@ -143,8 +143,8 @@ function travelify_options_register_theme_customizer($wp_customize)
 
     /* Travelify Typography Color */
     $wp_customize->add_section('travelify_typography_options', array(
-        'title' => __('Travelify Typography Color', 'travelify'),
-        'description' => sprintf(__('Use the following settings change color for typography such as links, headings and content', 'travelify')),
+        'title' => esc_html__('Travelify Typography Color', 'travelify'),
+        'description' => esc_html__('Use the following settings change color for typography such as links, headings and content', 'travelify'),
         'priority' => 33,
         'panel' => 'travelify_main_options'
     ));
@@ -153,7 +153,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_hexcolor'
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'travelify_entry_color', array(
-            'label' => __('Entry Content Color', 'travelify'),
+            'label' => esc_html__('Entry Content Color', 'travelify'),
             'section' => 'travelify_typography_options',
             'settings' => 'travelify_entry_color'
         )));
@@ -163,7 +163,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_hexcolor'
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'travelify_header_color', array(
-            'label' => __('Header/Title Color', 'travelify'),
+            'label' => esc_html__('Header/Title Color', 'travelify'),
             'section' => 'travelify_typography_options',
             'settings' => 'travelify_header_color',
             'priority' => 8
@@ -174,7 +174,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_hexcolor'
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'travelify_link_color', array(
-            'label' => __('Link Color', 'travelify'),
+            'label' => esc_html__('Link Color', 'travelify'),
             'section' => 'travelify_typography_options',
             'settings' => 'travelify_link_color',
             'priority' => 11
@@ -185,7 +185,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_hexcolor'
         ));
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'travelify_link_hover_color', array(
-            'label' => __('Link Hover Color', 'travelify'),
+            'label' => esc_html__('Link Hover Color', 'travelify'),
             'section' => 'travelify_typography_options',
             'settings' => 'travelify_link_hover_color',
             'priority' => 12
@@ -193,17 +193,17 @@ function travelify_options_register_theme_customizer($wp_customize)
 
     /* Travelify Footer Section */
     $wp_customize->add_section('travelify_footer_options', array(
-        'title' => __('Travelify Footer', 'travelify'),
-        'description' => sprintf(__('Use the following settings customize Footer', 'travelify')),
+        'title' => esc_html__( 'Travelify Footer', 'travelify' ),
+        'description' => esc_html__('Use the following settings customize Footer', 'travelify'),
         'priority' => 34,
         'panel' => 'travelify_main_options'
     ));
         $wp_customize->add_setting('travelify_footer_textbox', array(
-            'default' => 'Default footer text',
-            'sanitize_callback' => 'travelify_sanitize_hexcolor'
+            'default' => esc_html__( 'Default footer text', 'travelify' ),
+            'sanitize_callback' => 'wp_kses_post'
         ));
         $wp_customize->add_control('travelify_footer_textbox', array(
-            'label' => __('Copyright text', 'travelify'),
+            'label' => esc_html__('Copyright text', 'travelify'),
             'section' => 'travelify_footer_options',
             'type' => 'text'
         ));
@@ -213,8 +213,8 @@ function travelify_options_register_theme_customizer($wp_customize)
         'priority' => 10,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Header Options', 'travelify'),
-        'description' => __('Section to update theme options for header', 'travelify'),
+        'title' => esc_html__('Header Options', 'travelify'),
+        'description' => esc_html__('Section to update theme options for header', 'travelify'),
         'panel' => 'travelify_main_options'
     ));
         $wp_customize->add_setting('travelify_theme_options[header_logo]', array(
@@ -224,7 +224,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'esc_url_raw'
         ));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'travelify_theme_options[header_logo]', array(
-            'label' => __('Header Logo', 'travelify'),
+            'label' => esc_html__('Header Logo', 'travelify'),
             'section' => 'travelify_header_options',
             'mime_type' => 'image',
             'settings' => 'travelify_theme_options[header_logo]'
@@ -237,12 +237,12 @@ function travelify_options_register_theme_customizer($wp_customize)
         ));
         $wp_customize->add_control('travelify_theme_options[header_show]', array(
             'type' => 'radio',
-            'label' => __('Show', 'travelify'),
+            'label' => esc_html__('Show', 'travelify'),
             'section' => 'travelify_header_options',
             'choices' => array(
-                'header-logo' => __('Header Logo Only', 'travelify'),
-                'header-text' => __('Header Text Only', 'travelify'),
-                'disable-both' => __('Disable', 'travelify')
+                'header-logo' => esc_html__('Header Logo Only', 'travelify'),
+                'header-text' => esc_html__('Header Text Only', 'travelify'),
+                'disable-both' => esc_html__('Disable', 'travelify')
             )
         ));
 
@@ -251,7 +251,7 @@ function travelify_options_register_theme_customizer($wp_customize)
         'priority' => 30,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Layout Options', 'travelify'),
+        'title' => esc_html__('Layout Options', 'travelify'),
         'panel' => 'travelify_main_options'
     ));
         $wp_customize->add_setting('travelify_theme_options[default_layout]', array(
@@ -261,16 +261,16 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_radio_layout'
         ));
         $wp_customize->add_control(new Travelify_Layout_Picker_Custom_Control($wp_customize, 'travelify_theme_options[default_layout]', array(
-            'description' => __('This will set the default layout style. However, you can choose different layout for each page via editor', 'travelify'),
+            'description' => esc_html__('This will set the default layout style. However, you can choose different layout for each page via editor', 'travelify'),
             'section' => 'travelify_layout_options',
             'type' => 'radio-image',
             'settings' => 'travelify_theme_options[default_layout]',
             'choices' => array(
-                'no-sidebar' => __('No Sidebar', 'travelify'),
-                'no-sidebar-full-width' => __('No Sidebar, Full Width', 'travelify'),
-                'no-sidebar-one-column' => __('No Sidebar, One Column', 'travelify'),
-                'left-sidebar' => __('Left Sidebar', 'travelify'),
-                'right-sidebar' => __('Right Sidebar', 'travelify')
+                'no-sidebar'            => esc_html__('No Sidebar', 'travelify'),
+                'no-sidebar-full-width' => esc_html__('No Sidebar, Full Width', 'travelify'),
+                'no-sidebar-one-column' => esc_html__('No Sidebar, One Column', 'travelify'),
+                'left-sidebar'          => esc_html__('Left Sidebar', 'travelify'),
+                'right-sidebar'         => esc_html__('Right Sidebar', 'travelify')
             )
         )));
 
@@ -282,7 +282,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_checkbox'
         ));
         $wp_customize->add_control('travelify_theme_options[reset_layout]', array(
-            'label' => __('Check to reset Layout', 'travelify'),
+            'label' => esc_html__('Check to reset Layout', 'travelify'),
             'section' => 'travelify_layout_options',
             'type' => 'checkbox',
             'settings' => 'travelify_theme_options[reset_layout]'
@@ -293,8 +293,8 @@ function travelify_options_register_theme_customizer($wp_customize)
         'priority' => 50,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('RSS URL', 'travelify'),
-        'description' => __('Enter your preferred RSS URL. (Feedburner or other)', 'travelify'),
+        'title' => esc_html__('RSS URL', 'travelify'),
+        'description' => esc_html__('Enter your preferred RSS URL. (Feedburner or other)', 'travelify'),
         'panel' => 'travelify_main_options'
     ));
         $wp_customize->add_setting('travelify_theme_options[feed_url]', array(
@@ -304,7 +304,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'esc_url_raw'
         ));
         $wp_customize->add_control('travelify_theme_options[feed_url]', array(
-            'label' => __('Feed Redirect URL', 'travelify'),
+            'label' => esc_html__('Feed Redirect URL', 'travelify'),
             'section' => 'travelify_rss_options'
         ));
 
@@ -313,7 +313,7 @@ function travelify_options_register_theme_customizer($wp_customize)
         'priority' => 60,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Homepage Post Options', 'travelify'),
+        'title' => esc_html__('Homepage Post Options', 'travelify'),
         'panel' => 'travelify_main_options'
     ));
         $wp_customize->add_setting('travelify_theme_options[front_page_category]', array(
@@ -323,8 +323,8 @@ function travelify_options_register_theme_customizer($wp_customize)
             'transport' => 'postMessage',
             'sanitize_callback' => 'travelify_sanitize_multiselect'
         ));
-        $wp_customize->add_control(new tavelify_Customize_Control_Multi_Select_Category($wp_customize, 'travelify_theme_options[front_page_category]', array(
-            'description' => __('You may select multiple categories by holding down the CTRL (Windows) or cmd (Mac).', 'travelify'),
+        $wp_customize->add_control(new Travelify_Customize_Control_Multi_Select_Category($wp_customize, 'travelify_theme_options[front_page_category]', array(
+            'description' => esc_html__('You may select multiple categories by holding down the CTRL (Windows) or cmd (Mac).', 'travelify'),
             'section' => 'travelify_homepage_post_options',
             'priority' => 10,
             'type' => 'multi-select-cat'
@@ -334,15 +334,15 @@ function travelify_options_register_theme_customizer($wp_customize)
     $wp_customize->add_panel('travelify_slider_options', array(
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Travelify Featured Slider', 'travelify'),
-        'description' => __('Panel to update travelify theme options', 'travelify'), // Include html tags such as <p>.
+        'title' => esc_html__('Travelify Featured Slider', 'travelify'),
+        'description' => esc_html__('Panel to update travelify theme options', 'travelify'), // Include html tags such as <p>.
         'priority' => 15 // Mixed with top-level-section hierarchy.
     ));
     $wp_customize->add_section('travelify_post_slider_options', array(
         'priority' => 60,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Featured Post/Page Slider Options', 'travelify'),
+        'title' => esc_html__('Featured Post/Page Slider Options', 'travelify'),
         'panel' => 'travelify_slider_options'
     ));
         $wp_customize->add_setting('travelify_theme_options[exclude_slider_post]', array(
@@ -352,7 +352,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_checkbox'
         ));
         $wp_customize->add_control('travelify_theme_options[exclude_slider_post]', array(
-            'label' => __('Check to exclude slider post from Homepage posts', 'travelify'),
+            'label' => esc_html__('Check to exclude slider post from Homepage posts', 'travelify'),
             'section' => 'travelify_post_slider_options',
             'type' => 'checkbox',
             'settings' => 'travelify_theme_options[exclude_slider_post]'
@@ -369,7 +369,7 @@ function travelify_options_register_theme_customizer($wp_customize)
         new Travelify_Featured_Slider_Custom_Control(
         $wp_customize,
             'travelify_theme_options[featured_post_slider]', array(
-            'label' => __( 'Number of slides', 'travelify' ),
+            'label' => esc_html__( 'Number of slides', 'travelify' ),
             'section' => 'travelify_post_slider_options',
             'settings'    => 'travelify_theme_options[featured_post_slider]',
             'type'  => 'featured-slider'
@@ -380,7 +380,7 @@ function travelify_options_register_theme_customizer($wp_customize)
         'priority' => 60,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Slider Options', 'travelify'),
+        'title' => esc_html__('Slider Options', 'travelify'),
         'panel' => 'travelify_slider_options'
     ));
         $wp_customize->add_setting('travelify_theme_options[disable_slider]', array(
@@ -390,7 +390,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_checkbox'
         ));
         $wp_customize->add_control('travelify_theme_options[disable_slider]', array(
-            'label' => __('Check to disable Slider', 'travelify'),
+            'label' => esc_html__('Check to disable Slider', 'travelify'),
             'section' => 'travelify_slide_effect_options',
             'type' => 'checkbox',
             'settings' => 'travelify_theme_options[disable_slider]'
@@ -403,7 +403,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_nohtml'
         ));
         $wp_customize->add_control('travelify_theme_options[transition_effect]', array(
-            'label' => __('Transition Effect', 'travelify'),
+            'label' => esc_html__('Transition Effect', 'travelify'),
             'section' => 'travelify_slide_effect_options',
             'type'    => 'select',
             'choices'    => array(
@@ -428,7 +428,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_number'
         ));
         $wp_customize->add_control('travelify_theme_options[transition_delay]', array(
-            'label' => __('Transition delay( in second(s) )', 'travelify'),
+            'label' => esc_html__('Transition delay( in second(s) )', 'travelify'),
             'section' => 'travelify_slide_effect_options',
         ));
 
@@ -439,7 +439,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_number'
         ));
         $wp_customize->add_control('travelify_theme_options[transition_duration]', array(
-            'label' => __('Transition length (in second(s))', 'travelify'),
+            'label' => esc_html__('Transition length (in second(s))', 'travelify'),
             'section' => 'travelify_slide_effect_options',
         ));
 
@@ -448,24 +448,37 @@ function travelify_options_register_theme_customizer($wp_customize)
         'priority' => 17,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Travelify Social Links', 'travelify'),
-        'description' => __('Enter URLs for your social networks e.g.', 'travelify') . 'https://twitter.com/colorlib'
+        'title' => esc_html__('Travelify Social Links', 'travelify'),
+        'description' => esc_html__('Enter URLs for your social networks e.g.', 'travelify') . 'https://twitter.com/colorlib'
     ));
 
-        $social_links = array( 'Facebook' => 'social_facebook', 'Twitter' => 'social_twitter', 'Google-Plus' => 'social_googleplus', 'Pinterest' => 'social_pinterest', 'YouTube' => 'social_youtube', 'Vimeo' => 'social_vimeo', 'LinkedIn' => 'social_linkedin', 'Flickr' => 'social_flickr', 'Tumblr' => 'social_tumblr', 'Instagram' => 'social_instagram', 'RSS' => 'social_rss', 'GitHub' => 'social_github' );
+        $social_links = array(
+            'social_facebook'   => esc_html__( 'Facebook', 'travelify'),
+            'social_twitter'    => esc_html__( 'Twitter', 'travelify'),
+            'social_googleplus' => esc_html__( 'Google-Plus', 'travelify'),
+            'social_pinterest'  => esc_html__( 'Pinterest', 'travelify'),
+            'social_youtube'    => esc_html__( 'YouTube', 'travelify'),
+            'social_vimeo'      => esc_html__( 'Vimeo', 'travelify'),
+            'social_linkedin'   => esc_html__( 'LinkedIn', 'travelify'),
+            'social_flickr'     => esc_html__( 'Flickr', 'travelify'),
+            'social_tumblr'     => esc_html__( 'Tumblr', 'travelify'),
+            'social_instagram'  => esc_html__( 'Instagram', 'travelify'),
+            'social_rss'        => esc_html__( 'RSS', 'travelify'),
+            'social_github'     => esc_html__( 'GitHub', 'travelify'),
+        );
         foreach ($social_links as $key => $val) {
 
-            $wp_customize->add_setting('travelify_theme_options[' . $val . ']', array(
+            $wp_customize->add_setting('travelify_theme_options[' . $key . ']', array(
                 'default' => '',
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
                 'transport' => 'postMessage',
                 'sanitize_callback' => 'esc_url_raw'
             ));
-            $wp_customize->add_control('travelify_theme_options[' . $val . ']', array(
-                'label' => sprintf(__('%s', 'travelify'), $key),
+            $wp_customize->add_control('travelify_theme_options[' . $key . ']', array(
+                'label' => $val,
                 'section' => 'travelify_social_url_options',
-                'settings' => 'travelify_theme_options[' . $val . ']',
+                'settings' => 'travelify_theme_options[' . $key . ']',
                 'type' => 'text'
             ));
         }
@@ -475,8 +488,8 @@ function travelify_options_register_theme_customizer($wp_customize)
         'priority' => 19,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Travelify Other Options', 'travelify'),
-        'description' => __('Enter your custom CSS styles.', 'travelify')
+        'title' => esc_html__('Travelify Other Options', 'travelify'),
+        'description' => esc_html__('Enter your custom CSS styles.', 'travelify')
     ));
         $wp_customize->add_setting('travelify_theme_options[custom_css]', array(
             'default' => '',
@@ -485,7 +498,7 @@ function travelify_options_register_theme_customizer($wp_customize)
             'sanitize_callback' => 'travelify_sanitize_strip_slashes'
         ));
         $wp_customize->add_control('travelify_theme_options[custom_css]', array(
-            'label' => __('This CSS will overwrite the CSS of style.css file.', 'travelify'),
+            'label' => esc_html__('This CSS will overwrite the CSS of style.css file.', 'travelify'),
             'section' => 'travelify_others_options',
             'settings' => 'travelify_theme_options[custom_css]',
             'type' => 'textarea'
@@ -495,7 +508,7 @@ function travelify_options_register_theme_customizer($wp_customize)
         'priority' => 6,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Travelify Important Links', 'travelify'),
+        'title' => esc_html__('Travelify Important Links', 'travelify'),
     ));
         $wp_customize->add_setting('travelify_theme_options[imp_links]', array(
           'capability' => 'edit_theme_options',
@@ -581,7 +594,10 @@ function travelify_sanitize_checkbox( $input ) {
  * @package Travelify
  */
 function travelify_sanitize_radio_header( $input ) {
-    $valid = array( 'header-logo' => 'Header Logo Only','header-text' => 'Header Text Only','disable-both' => 'Disable' );
+    $valid = array(
+        'header-logo'  => esc_html__( 'Header Logo Only', 'travelify' ),
+        'header-text'  => esc_html__( 'Header Text Only', 'travelify' ),
+        'disable-both' => esc_html__( 'Disable', 'travelify' ) );
     if ( array_key_exists( $input, $valid ) ) {
         return $input;
     } else {
@@ -594,7 +610,13 @@ function travelify_sanitize_radio_header( $input ) {
  * @package Travelify
  */
 function travelify_sanitize_radio_layout( $input ) {
-    $valid = array( 'no-sidebar' => 'No Sidebar','no-sidebar-full-width' => 'No Sidebar, Full Width', 'no-sidebar-one-column' => 'No Sidebar, One Column', 'left-sidebar' => 'Left Sidebar', 'right-sidebar' => 'Right Sidebar' );
+    $valid = array(
+        'no-sidebar'            => esc_html__( 'No Sidebar', 'travelify' ),
+        'no-sidebar-full-width' => esc_html__( 'No Sidebar, Full Width', 'travelify' ),
+        'no-sidebar-one-column' => esc_html__( 'No Sidebar, One Column', 'travelify' ),
+        'left-sidebar'          => esc_html__( 'Left Sidebar', 'travelify' ),
+        'right-sidebar'         => esc_html__( 'Right Sidebar', 'travelify' )
+    );
     if ( array_key_exists( $input, $valid ) ) {
         return $input;
     } else {
@@ -637,11 +659,11 @@ function travelify_sanitize_slider( $values ) {
 function travelify_customizer_css() {
     ?>
     <style type="text/css">
-        a { color: <?php echo get_theme_mod('travelify_link_color', '#57AD68'); ?>; }
-        #site-title a { color: <?php echo get_theme_mod('travelify_logo_color'); ?>; }
-        #site-title a:hover, #site-title a:focus  { color: <?php echo get_theme_mod('travelify_logo_hover_color'); ?>; }
-        .wrapper { background: <?php echo get_theme_mod('travelify_wrapper_color', '#F8F8F8'); ?>; }
-        .social-icons ul li a { color: <?php echo get_theme_mod('travelify_social_color', '#d0d0d0'); ?>; }
+        a { color: <?php echo esc_attr( get_theme_mod('travelify_link_color', '#57AD68') ); ?>; }
+        #site-title a { color: <?php echo esc_attr( get_theme_mod('travelify_logo_color') ); ?>; }
+        #site-title a:hover, #site-title a:focus  { color: <?php echo esc_attr( get_theme_mod('travelify_logo_hover_color') ); ?>; }
+        .wrapper { background: <?php echo esc_attr( get_theme_mod('travelify_wrapper_color', '#F8F8F8') ); ?>; }
+        .social-icons ul li a { color: <?php echo esc_attr( get_theme_mod('travelify_social_color', '#d0d0d0') ); ?>; }
 		#main-nav a,
 		#main-nav a:hover,
 		#main-nav a:focus,
@@ -650,9 +672,9 @@ function travelify_customizer_css() {
 		#main-nav ul li.current-menu-ancestor a,
 		#main-nav ul li.current_page_item a,
 		#main-nav ul li:hover > a,
-		#main-nav ul li:focus-within > a { color: <?php echo get_theme_mod('travelify_menu_item_color', '#fff'); ?>; }
-        .widget, article { background: <?php echo get_theme_mod('travelify_content_bg_color', '#fff'); ?>; }
-        .entry-title, .entry-title a, .entry-title a:focus, h1, h2, h3, h4, h5, h6, .widget-title  { color: <?php echo get_theme_mod('travelify_header_color', '#1b1e1f'); ?>; }
+		#main-nav ul li:focus-within > a { color: <?php echo esc_attr( get_theme_mod('travelify_menu_item_color', '#fff') ); ?>; }
+        .widget, article { background: <?php echo esc_attr( get_theme_mod('travelify_content_bg_color', '#fff') ); ?>; }
+        .entry-title, .entry-title a, .entry-title a:focus, h1, h2, h3, h4, h5, h6, .widget-title  { color: <?php echo esc_attr( get_theme_mod('travelify_header_color', '#1b1e1f') ); ?>; }
 		a:focus,
 		a:active,
 		a:hover,
@@ -671,9 +693,9 @@ function travelify_customizer_css() {
 		.entry-meta a:hover,
 		.entry-meta a:focus,
 		#site-generator .copyright a:hover,
-		#site-generator .copyright a:focus { color: <?php echo get_theme_mod('travelify_link_hover_color', '#439f55'); ?>; }
-        #main-nav { background: <?php echo get_theme_mod('travelify_menu_color', '#57ad68'); ?>; border-color: <?php echo get_theme_mod('travelify_menu_color', '#57ad68'); ?>; }
-        #main-nav ul li ul, body { border-color: <?php echo get_theme_mod('travelify_menu_color', '#439f55'); ?>; }
+		#site-generator .copyright a:focus { color: <?php echo esc_attr( get_theme_mod('travelify_link_hover_color', '#439f55') ); ?>; }
+        #main-nav { background: <?php echo esc_attr( get_theme_mod('travelify_menu_color', '#57ad68') ); ?>; border-color: <?php echo esc_attr( get_theme_mod('travelify_menu_color', '#57ad68') ); ?>; }
+        #main-nav ul li ul, body { border-color: <?php echo esc_attr( get_theme_mod('travelify_menu_color', '#439f55') ); ?>; }
 		#main-nav a:hover,
 		#main-nav a:focus,
 		#main-nav ul li.current-menu-item a,
@@ -686,14 +708,14 @@ function travelify_customizer_css() {
 		#main-nav li:focus-within > a,
 		#main-nav ul ul :hover > a,
 		#main-nav ul ul :focus-within > a,
-		#main-nav a:focus { background: <?php echo get_theme_mod('travelify_menu_hover_color', '#439f55'); ?>; }
+		#main-nav a:focus { background: <?php echo esc_attr( get_theme_mod('travelify_menu_hover_color', '#439f55') ); ?>; }
 		#main-nav ul li ul li a:hover,
 		#main-nav ul li ul li a:focus,
 		#main-nav ul li ul li:hover > a,
 		#main-nav ul li ul li:focus-within > a,
 		#main-nav ul li.current-menu-item ul li a:hover
-		#main-nav ul li.current-menu-item ul li a:focus { color: <?php echo get_theme_mod('travelify_menu_hover_color', '#439f55'); ?>; }
-        .entry-content { color: <?php echo get_theme_mod('travelify_entry_color', '#1D1D1D'); ?>; }
+		#main-nav ul li.current-menu-item ul li a:focus { color: <?php echo esc_attr( get_theme_mod('travelify_menu_hover_color', '#439f55') ); ?>; }
+        .entry-content { color: <?php echo esc_attr( get_theme_mod('travelify_entry_color', '#1D1D1D') ); ?>; }
 		input[type="reset"],
 		input[type="button"],
 		input[type="submit"],
@@ -705,12 +727,15 @@ function travelify_customizer_css() {
 		.pagination a:focus span,
 		.wp-pagenavi .current,
 		.wp-pagenavi a:hover,
-		.wp-pagenavi a:focus { background: <?php echo get_theme_mod('travelify_element_color', '#57ad68'); ?>; border-color: <?php echo get_theme_mod('travelify_element_color', '#57ad68'); ?> !important; }
+		.wp-pagenavi a:focus {
+            background: <?php echo esc_attr( get_theme_mod('travelify_element_color', '#57ad68') ); ?>;
+            border-color: <?php echo esc_attr( get_theme_mod('travelify_element_color', '#57ad68') ); ?> !important;
+        }
 		::selection,
-		.back-to-top:focus-within a { background: <?php echo get_theme_mod('travelify_element_color', '#57ad68'); ?>; }
-        blockquote { border-color: <?php echo get_theme_mod('travelify_element_color', '#439f55'); ?>; }
+		.back-to-top:focus-within a { background: <?php echo esc_attr( get_theme_mod('travelify_element_color', '#57ad68') ); ?>; }
+        blockquote { border-color: <?php echo esc_attr( get_theme_mod('travelify_element_color', '#439f55') ); ?>; }
 		#controllers a:hover,
-		#controllers a.active { color: <?php echo get_theme_mod('travelify_element_color', ' #439f55'); ?>; }
+		#controllers a.active { color: <?php echo esc_attr( get_theme_mod('travelify_element_color', ' #439f55') ); ?>; }
 		input[type="reset"]:hover,
 		input[type="reset"]:focus,
 		input[type="button"]:hover,
@@ -725,7 +750,10 @@ function travelify_customizer_css() {
 		.entry-meta-bar .readmore:active,
 		ul.default-wp-page li a:hover,
 		ul.default-wp-page li a:focus,
-		ul.default-wp-page li a:active { background: <?php echo get_theme_mod('travelify_element_hover_color', '#439f55'); ?>; border-color: <?php echo get_theme_mod('travelify_element_hover_color', '#439f55'); ?>; }
+		ul.default-wp-page li a:active {
+            background: <?php echo esc_attr( get_theme_mod('travelify_element_hover_color', '#439f55') ); ?>;
+            border-color: <?php echo esc_attr( get_theme_mod('travelify_element_hover_color', '#439f55') ); ?>;
+        }
     </style>
     <?php
 }

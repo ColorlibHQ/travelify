@@ -2,32 +2,12 @@
 
 if ( ! class_exists( 'WP_Customize_Control' ) )
     return NULL;
-
-/**
- * Redirect to Background link
- *
- * @access public
- */
-class WP_Background_Nav_Customize_Control extends WP_Customize_Control {
-
-    public $type = 'background_nav';
-
-    /**
-     * Render the control's content.
-     */
-    public function render_content() {  ?>
-        <label for="create-background-nav-submit"><span class="customize-control-title"><?php _e('Change theme background', 'travelify'); ?></span></label>
-        <a href="<?php echo admin_url('customize.php?autofocus[control]=background_image'); ?>" class="button button-secondary" id="create-background-nav-submit" tabindex="0"><?php _e('Click Here', 'travelify'); ?></a><?php
-    }
-
-}
-
 /**
  * Multi Select category customize control class.
  *
  * @access public
  */
-class tavelify_Customize_Control_Multi_Select_Category extends WP_Customize_Control {
+class Travelify_Customize_Control_Multi_Select_Category extends WP_Customize_Control {
 
     /**
      * The type of customize control being rendered.
@@ -153,7 +133,7 @@ class Travelify_Featured_Slider_Custom_Control extends WP_Customize_Control
                         <li class="toclone">
                             <label class="handle customize-control-title"><?php _e( 'Slide #', 'travelify' ); ?><span class="count"><?php echo absint( $i ); ?></span></label>
                             <input class="featured_post_slider" size=7 type="text" name="travelify_theme_options[featured_post_slider][<?php echo absint( $i ); ?>]" value="<?php if( isset($options[ 'featured_post_slider' ][$i] ) ) echo absint( $options[ 'featured_post_slider' ][$i] ); ?>" />
-                            <a href="<?php bloginfo ( 'url' );?>/wp-admin/post.php?post=<?php if( isset($options[ 'featured_post_slider' ][$i] ) ) echo absint( $options[ 'featured_post_slider' ][ $i ] ); ?>&action=edit" class="button slider_edit" title="<?php esc_attr_e('Edit','travelify'); ?>" target="_blank"><p class="dashicons-before dashicons-edit"></p></a>
+                            <a href="<?php echo esc_url( home_url() );?>/wp-admin/post.php?post=<?php if( isset($options[ 'featured_post_slider' ][$i] ) ) echo absint( $options[ 'featured_post_slider' ][ $i ] ); ?>&action=edit" class="button slider_edit" title="<?php esc_attr_e('Edit','travelify'); ?>" target="_blank"><p class="dashicons-before dashicons-edit"></p></a>
 
                             <a href="#" class="clone button-primary">+</a>
                             <a href="#" class="delete button">-</a>

@@ -4,12 +4,21 @@ Theme URI: http://colorlib.com/wp/travelify/
 Author: Colorlib
 Author URI: http://colorlib.com/wp/
 Description: Travelify is a clan, simple and fully responsive WordPress WooCommerce theme that looks awesome on any device. It adjusts automatically to any screen size including tablets and smartphones as well as Retina displays. Theme is built using HTML5 / CSS3 and is SEO friendly. This WordPress theme was built with travel, adventures, languages and nature in mind but it can be used for anything so be creative and unleash its full potential in blogging, eCommerce, business and other websites. Along the awesome design this theme is customizable via a simple but yet powerful theme options. Some of the nicest features are featured post slider, social icons, custom logo, translation ready (compatible with WPML plugin) and many more. This theme out-of-the-box plays nicely with WooCommerce, Breadcrumb NavXT, WP-PageNavi, Contact Form 7 and other popular plugins. Theme available in English, French, German, Hungarian, Italian, Spanish, Dutch, Hebrew, Slovak, Turkish, Swedish, Brazilian Portuguese, Polish, Finnish, Bulgarian, Persian (Farsi), Greek, Russian and Chinese.
-Version: 3.0.5
+Version: 3.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: white, light, green, custom-background, custom-header, custom-menu, fluid-layout, featured-images, full-width-template, left sidebar, right sidebar, one-column, two columns, three-columns, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 Text Domain: travelify
 
+== Copyright notice ==
+
+* Author: Aigars Silkalns
+* Author URI: http://colorlib.com/wp/
+* License: GNU General Public License v3.0
+* License URI: http://www.gnu.org/licenses/gpl.html
+* Travelify theme, Copyright 2014-2015 http://colorlib.com
+* Travelify WordPress theme is distributed under the terms of the GNU GPL
+* Travelify is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 
 == Additional Notes ==
 
@@ -34,15 +43,26 @@ Activiation and Use
 
 == License ==
 
-Unless otherwise specified, all the theme files, scripts and images
-are licensed under GNU General Public License version 2, see file license.txt.
+Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License version 2, see file license.txt.
 The exceptions to this license are as follows:
-* Attitude WordPress theme licensed under GPL
-* HTML5 Shiv is licensed under MIT
-* jQuery Cycle Plugin is dual licensed under GPL & MIT
-* jQuery Cookie Plugin is dual licensed under GPL & MIT
-* TinyNav.js is licensed under the MIT license
-* Genericons font is licensed under GPL
+* TGM Plugin Activation library (https://github.com/thomasgriffin/TGM-Plugin-Activation) licensed under GNU General Public License v2.0 or later
+* [html5shiv.js](https://github.com/aFarkas/html5shiv) by Alexander Farkas licensed under a dual license system (MIT or GPL version 2)
+* [jquery-cloneya.js](https://github.com/Yapapaya/jquery-cloneya) by Saurabh Shukla licensed under the MIT license
+* [jquery-cloneya.js](http://jquery.malsup.com/cycle/) by M. Alsup licensed under a dual license system (MIT and GPL)
+* [TinyNav.js](http://tinynav.com/) by @viljamis licensed under MIT license
+* Genericons font(https://github.com/Automattic/genericons-neue) is licensed under GPL
+
+= Incorporated Code Copyright Attribution =
+* Travelify WordPress Theme incorporates code from Attitude WordPress Theme, by Theme Horse
+  License: GPLv2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.htm
+
+= Images bundled with the theme =
+* screenshot.png :
+	* green-mountains-and-flowing-river-206660.jpg - Green Mountains and Flowing River by Pixabay ( https://www.pexels.com/photo/green-mountains-and-flowing-river-206660/ )
+  	CC0, https://www.pexels.com/creative-commons-images/
+  	
+	* panoramic-view-of-sea-against-blue-sky-248771.jpg - Panoramic View of Sea Against Blue Sky by Pixabay ( https://www.pexels.com/photo/panoramic-view-of-sea-against-blue-sky-248771/ )
+  	CC0, https://www.pexels.com/creative-commons-images/
 
 == Theme Notes ==
 More about this theme you can find in the following link.
