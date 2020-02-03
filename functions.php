@@ -126,17 +126,20 @@ if ( ! function_exists( 'travelify_setup' ) ):
             ));
 
             // We get only 1 post
-            $travelify_wp_css = $posts[0];
-            // Create the new content
-            $travelify_wp_css->post_content = $travelify_wp_css->post_content . $travelify_options['custom_css'];
-            // Update post with new content
-            wp_update_post($travelify_wp_css);
-            // Unset custom_css option, previous set bye theme
-            unset($travelify_options['custom_css']);
-            // Delete transient
-            delete_transient('travelify_internal_css');
-            // Update option with new values ( no custom_css )
-            update_option('travelify_theme_options', $travelify_options);
+            if ($posts && !empty($posts)) {
+                $travelify_wp_css = $posts[0];
+
+                // Create the new content
+                $travelify_wp_css->post_content = $travelify_wp_css->post_content . $travelify_options['custom_css'];
+                // Update post with new content
+                wp_update_post($travelify_wp_css);
+                // Unset custom_css option, previous set bye theme
+                unset($travelify_options['custom_css']);
+                // Delete transient
+                delete_transient('travelify_internal_css');
+                // Update option with new values ( no custom_css )
+                update_option('travelify_theme_options', $travelify_options);
+            }
         }
 
 	}
