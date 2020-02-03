@@ -116,7 +116,7 @@ function travelify_theloop_for_archive() {
 				$image = '';
 	     		$title_attribute = apply_filters( 'the_title', get_the_title( $post->ID ) );
 	     		$image .= '<figure class="post-featured-image">';
-	  			$image .= '<a href="' . esc_url( get_permalink() ) . '" title="'.the_title( '', '', false ).'">';
+	  			$image .= '<a href="' . esc_url( get_permalink() ) . '" title="'.the_title_attribute( '', '', false ).'">';
 	  			$image .= get_the_post_thumbnail( $post->ID, 'featured', array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $title_attribute ) ) ).'</a>';
 	  			$image .= '</figure>';
 
@@ -148,7 +148,7 @@ function travelify_theloop_for_archive() {
 	             	<?php } ?>
     			</div><!-- .entry-meta -->
     			<?php
-    			echo '<a class="readmore" href="' . esc_url( get_permalink() ) . '" title="'.the_title( '', '', false ).'">'.__( 'Read more', 'travelify' ).'</a>';
+    			echo '<a class="readmore" href="' . esc_url( get_permalink() ) . '" title="'.the_title_attribute( '', '', false ).'">'.__( 'Read more', 'travelify' ).'</a>';
     			?>
     		</div>
 
@@ -433,7 +433,7 @@ function travelify_theloop_for_template_blog_image_large() {
 				$image = '';
 	     		$title_attribute = apply_filters( 'the_title', get_the_title( $post->ID ) );
 	     		$image .= '<figure class="post-featured-image">';
-	  			$image .= '<a href="' . esc_url( get_permalink() ) . '" title="'.the_title( '', '', false ).'">';
+	  			$image .= '<a href="' . esc_url( get_permalink() ) . '" title="'.the_title_attribute( '', '', false ).'">';
 	  			$image .= get_the_post_thumbnail( $post->ID, 'featured', array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $title_attribute ) ) ).'</a>';
 	  			$image .= '</figure>';
 
@@ -549,7 +549,7 @@ function travelify_theloop_for_template_blog_image_medium() {
 				$image = '';
 	     		$title_attribute = apply_filters( 'the_title', get_the_title( $post->ID ) );
 	     		$image .= '<figure class="post-featured-image">';
-	  			$image .= '<a href="' . esc_url( get_permalink() ) . '" title="'.the_title( '', '', false ).'">';
+	  			$image .= '<a href="' . esc_url( get_permalink() ) . '" title="'.the_title_attribute( '', '', false ).'">';
 	  			$image .= get_the_post_thumbnail( $post->ID, 'featured-medium', array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $title_attribute ) ) ).'</a>';
 	  			$image .= '</figure>';
 
@@ -575,7 +575,7 @@ function travelify_theloop_for_template_blog_image_medium() {
 	             	<?php } ?>
     			</div><!-- .entry-meta -->
     			<?php
-    			echo '<a class="readmore" href="' . esc_url( get_permalink() ) . '" title="'.the_title( '', '', false ).'">'.__( 'Read more', 'travelify' ).'</a>';
+    			echo '<a class="readmore" href="' . esc_url( get_permalink() ) . '" title="'.the_title_attribute( '', '', false ).'">'.__( 'Read more', 'travelify' ).'</a>';
     			?>
     		</div>
 

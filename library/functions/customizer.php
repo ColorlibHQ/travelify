@@ -407,17 +407,17 @@ function travelify_options_register_theme_customizer($wp_customize)
             'section' => 'travelify_slide_effect_options',
             'type'    => 'select',
             'choices'    => array(
-                'fade'          =>  'fade',
-                'wipe'          =>  'wipe',
-                'scrollUp'      =>  'scrollUp',
-                'scrollDown'    =>  'scrollDown',
-                'scrollLeft'    =>  'scrollLeft',
-                'scrollRight'   =>  'scrollRight',
-                'blindX'        =>  'blindX',
-                'blindY'        =>  'blindY',
-                'blindZ'        =>  'blindZ',
-                'cover'         =>  'cover',
-                'shuffle'       =>  'shuffle'
+                'fade'          =>  esc_html__( 'Fade', 'travelify' ),
+                'wipe'          =>  esc_html__( 'Wipe', 'travelify' ),
+                'scrollUp'      =>  esc_html__( 'ScrollUp', 'travelify' ),
+                'scrollDown'    =>  esc_html__( 'ScrollDown', 'travelify' ),
+                'scrollLeft'    =>  esc_html__( 'ScrollLeft', 'travelify' ),
+                'scrollRight'   =>  esc_html__( 'ScrollRight', 'travelify' ),
+                'blindX'        =>  esc_html__( 'BlindX', 'travelify' ),
+                'blindY'        =>  esc_html__( 'BlindY', 'travelify' ),
+                'blindZ'        =>  esc_html__( 'BlindZ', 'travelify' ),
+                'cover'         =>  esc_html__( 'Cover', 'travelify' ),
+                'shuffle'       =>  esc_html__( 'Shuffle', 'travelify' ),
             ),
         ));
 

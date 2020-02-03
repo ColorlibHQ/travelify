@@ -45,7 +45,7 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 * TGM Plugin Activation library (https://github.com/thomasgriffin/TGM-Plugin-Activation) licensed under GNU General Public License v2.0 or later
 * [html5shiv.js](https://github.com/aFarkas/html5shiv) by Alexander Farkas licensed under a dual license system (MIT or GPL version 2)
 * [jquery-cloneya.js](https://github.com/Yapapaya/jquery-cloneya) by Saurabh Shukla licensed under the MIT license
-* [jquery-cloneya.js](http://jquery.malsup.com/cycle/) by M. Alsup licensed under a dual license system (MIT and GPL)
+* [jquery-cycle.js](http://jquery.malsup.com/cycle/) by M. Alsup licensed under a dual license system (MIT and GPL)
 * [TinyNav.js](http://tinynav.com/) by @viljamis licensed under MIT license
 * Genericons font(https://github.com/Automattic/genericons-neue) is licensed under GPL
 
