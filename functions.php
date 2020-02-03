@@ -108,6 +108,37 @@ if ( ! function_exists( 'travelify_setup' ) ):
 		 * This theme supports add_editor_style
 		 */
 		add_editor_style();
+
+        /**
+         * Update WP default Addition CSS with Travelify's Custom CSS
+         */
+        // Get our own Custom CSS
+        $travelify_options = get_option('travelify_theme_options');
+
+        if (isset($travelify_options['custom_css'])) {
+            // Get Additional CSS for Travelify
+            $posts = get_posts(array(
+                'post_type'   => 'custom_css',
+                'name'        => 'travelify',
+                'orderby'     => 'date',
+                'order'       => 'DESC',
+                'numberposts' => 1
+            ));
+
+            // We get only 1 post
+            $travelify_wp_css = $posts[0];
+            // Create the new content
+            $travelify_wp_css->post_content = $travelify_wp_css->post_content . $travelify_options['custom_css'];
+            // Update post with new content
+            wp_update_post($travelify_wp_css);
+            // Unset custom_css option, previous set bye theme
+            unset($travelify_options['custom_css']);
+            // Delete transient
+            delete_transient('travelify_internal_css');
+            // Update option with new values ( no custom_css )
+            update_option('travelify_theme_options', $travelify_options);
+        }
+
 	}
 endif; // travelify_setup
 

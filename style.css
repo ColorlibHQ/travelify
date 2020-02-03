@@ -4,7 +4,7 @@ Theme URI: http://colorlib.com/wp/travelify/
 Author: Colorlib
 Author URI: http://colorlib.com/wp/
 Description: Travelify is a clean, simple, responsive and customizable WordPress WooCommerce theme that looks awesome on any device. It adjusts automatically to any screen size including tablets and smartphones as well as Retina displays. Theme is built using HTML5 / CSS3 and is SEO friendly. This WordPress theme was built with travel, adventures, languages and nature in mind but it can be used for anything so be creative and unleash its full potential in blogging, ecommerce, business and other websites. Along the awesome design this theme is customizable via a simple but yet powerful theme options. Some of the nicest features are featured post slider, social icons, custom logo, translation ready (compatible with WPML plugin) and many more. This theme out-of-the-box plays nicely with WooCommerce, Breadcrumb NavXT, WP-PageNavi, Contact Form 7 and other popular plugins. Theme available in English, French, German, Hungarian, Italian, Spanish, Dutch, Hebrew, Slovak, Turkish, Swedish, Brazilian Portuguese, Polish, Finnish, Bulgarian, Persian (Farsi), Greek, Russian and Chinese.
-Version: 3.0.7
+Version: 3.0.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: grid-layout, footer-widgets, education, entertainment, photography, featured-images, custom-menu, editor-style, custom-background, threaded-comments, custom-header
@@ -120,7 +120,7 @@ hr {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "Genericons";
-    src: url("library/font//Genericons.svg#Genericons") format("svg");
+    src: url("library/font/Genericons.svg#Genericons") format("svg");
   }
 }
 
@@ -1301,7 +1301,6 @@ thead th,tfoot th,thead tr:hover th,tfoot tr:hover th {
 	margin: 1.7rem 0;
 	border-bottom: 2px dashed #eaeaea;
 }
-}
  .comments-area article header {
 	margin: 0 0 2.4rem;
 	overflow: hidden;
@@ -1687,7 +1686,7 @@ ul.default-wp-page li a:active {
 	width: 95%;
 	text-align: center;
 	margin: auto;
-	border-radius: none;
+	/*border-radius: none;*/
 }
 .widget_calendar #wp-calendar caption,.widget_calendar #wp-calendar td,.widget_calendar #wp-calendar th {
 	text-align: center;

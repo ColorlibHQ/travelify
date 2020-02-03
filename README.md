@@ -64,7 +64,11 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 
 ## Change Log
 
-**= 3.0.6 =**
+**= 3.0.8 =**
+* WP.org review
+* Fixed extra closing bracket (`}`) in style.css 
+
+**= 3.0.7 =**
 * WP.org review
 
 **= 3.0.6 =**

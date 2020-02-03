@@ -464,7 +464,7 @@ function travelify_theloop_for_template_blog_image_large() {
 	             	<?php } ?>
     			</div><!-- .entry-meta -->
     			<?php
-    			echo '<a class="readmore" href="' . esc_url( get_permalink() ) . '" title="'.the_title( '', '', false ).'">'.__( 'Read more', 'travelify' ).'</a>';
+    			echo '<a class="readmore" href="' . esc_url( get_permalink() ) . '" title="'.the_title_attribute( '', '', false ).'">'.__( 'Read more', 'travelify' ).'</a>';
     			?>
     		</div>
 
