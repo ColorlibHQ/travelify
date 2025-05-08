@@ -50,7 +50,6 @@ function travelify_headerdetails() {
 		$elements = array(
 			$options[ 'social_facebook' ],
 			$options[ 'social_twitter' ],
-			$options[ 'social_googleplus' ],
 			$options[ 'social_linkedin' ],
 			$options[ 'social_pinterest' ],
 			$options[ 'social_youtube' ],
@@ -130,7 +129,12 @@ function travelify_headerdetails() {
 		else {
 			echo '<nav id="main-nav" class="clearfix">
 					<div class="container clearfix">';
-				wp_page_menu( array( 'menu_class'  => 'root' ) );
+				wp_nav_menu( array( 
+					'theme_location' => 'primary',
+					'fallback_cb'    => 'wp_page_menu',
+					'items_wrap'     => '<ul class="root">%3$s</ul>',
+					'menu_class'     => 'root'
+				) );
 			echo '</div><!-- .container -->
 					</nav><!-- #main-nav -->';
 		}
@@ -185,7 +189,6 @@ function travelify_socialnetworks( $flag ) {
 				$social_links = array(
 					'Facebook'    => 'social_facebook',
 					'Twitter'     => 'social_twitter',
-					'Google-Plus' => 'social_googleplus',
 					'Pinterest'   => 'social_pinterest',
 					'YouTube'     => 'social_youtube',
 					'Vimeo'       => 'social_vimeo',

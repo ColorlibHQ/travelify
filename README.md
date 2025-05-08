@@ -1,14 +1,14 @@
-# [Travelify](http://colorlib.com/wp/themes/travelify/)
+# [Travelify](https://colorlib.com/wp/themes/travelify/)
 
 ## Description
 
 Description: Travelify is a clan, simple and fully responsive WordPress WooCommerce theme that looks awesome on any device. It adjusts automatically to any screen size including tablets and smartphones as well as Retina displays. Theme is built using HTML5 / CSS3 and is SEO friendly. This WordPress theme was built with travel, adventures, languages and nature in mind but it can be used for anything so be creative and unleash its full potential in blogging, eCommerce, business and other websites. Along the awesome design this theme is customizable via a simple but yet powerful theme options. Some of the nicest features are featured post slider, social icons, custom logo, translation ready (compatible with WPML plugin) and many more. This theme out-of-the-box plays nicely with WooCommerce, Breadcrumb NavXT, WP-PageNavi, Contact Form 7, WPML and other popular plugins. Theme available in English, French, German, Hungarian, Italian, Spanish, Dutch, Hebrew, Slovak, Turkish, Swedish, Brazilian Portuguese, Polish, Finnish, Bulgarian, Greek, Persian, Russian and Chinese.
 
 ## More info
-More about this theme you can find in the [following link](http://colorlib.com/wp/themes/travelify/).
+More about this theme you can find in the [following link](https://colorlib.com/wp/themes/travelify/).
 
 ## Demo
-Travelify preview [is available here](http://colorlib.com/travelify/)
+Travelify preview [is available here](https://colorlib.com/travelify/)
 
 ## Installation
 
@@ -27,7 +27,7 @@ Travelify preview [is available here](http://colorlib.com/travelify/)
 
 ## Customization
 
-This theme has loads of customization options available via WordPress Customizer under Apperance - Customize. For more information about setup you can read **[Theme Documentationn](http://colorlib.com/wp/support/travelify/)**
+This theme has loads of customization options available via WordPress Customizer under Apperance - Customize. For more information about setup you can read **[Theme Documentationn](https://colorlib.com/wp/support/travelify/)**
 
 ## License
 
@@ -55,14 +55,20 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 
 = Images bundled with the theme =
 * screenshot.png :
-	* green-mountains-and-flowing-river-206660.jpg - Green Mountains and Flowing River by Pixabay ( https://www.pexels.com/photo/green-mountains-and-flowing-river-206660/ )
-  	CC0, https://www.pexels.com/creative-commons-images/
+	* green-mountains-and-flowing-river.jpg - Created/Taken by theme author
+  	Licensed under GPL
   	
-	* panoramic-view-of-sea-against-blue-sky-248771.jpg - Panoramic View of Sea Against Blue Sky by Pixabay ( https://www.pexels.com/photo/panoramic-view-of-sea-against-blue-sky-248771/ )
-  	CC0, https://www.pexels.com/creative-commons-images/
+	* panoramic-view-of-sea-against-blue-sky.jpg - Created/Taken by theme author
+  	Licensed under GPL
 
 
 ## Change Log
+
+**= 3.0.9 =**
+* Improved browser compatibility detection
+* Removed outdated Internet Explorer detection code
+* Enhanced HTML5 shim loading for better performance and compatibility with modern browsers
+* Improved code for better PHP 8.x and WordPress 6.8 compatibility
 
 **= 3.0.8 =**
 * WP.org review

@@ -58,10 +58,9 @@ function travelify_scripts_styles_method() {
    /**
     * Browser specific queuing i.e
     */
-	$travelify_user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
-	if(preg_match('/(?i)msie [1-8]/',$travelify_user_agent)) {
-		wp_enqueue_script( 'html5', get_template_directory_uri() . '/library/js/html5.min.js', true );
-	}
+	// Modern approach: Only load HTML5 shim for older browsers that might need it
+	// This replaces the outdated IE-specific check with a more reliable feature detection
+	wp_enqueue_script('html5', get_template_directory_uri() . '/library/js/html5.min.js', array(), null, true, array('strategy' => 'defer'));
 
 }
 

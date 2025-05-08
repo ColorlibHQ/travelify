@@ -455,7 +455,6 @@ function travelify_options_register_theme_customizer($wp_customize)
         $social_links = array(
             'social_facebook'   => esc_html__( 'Facebook', 'travelify'),
             'social_twitter'    => esc_html__( 'Twitter', 'travelify'),
-            'social_googleplus' => esc_html__( 'Google-Plus', 'travelify'),
             'social_pinterest'  => esc_html__( 'Pinterest', 'travelify'),
             'social_youtube'    => esc_html__( 'YouTube', 'travelify'),
             'social_vimeo'      => esc_html__( 'Vimeo', 'travelify'),
